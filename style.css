@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', system-ui, sans-serif;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin-top: 200px;
+    margin-left: 200px;
+    background:#002339;
+    color: white;
+
+}
+
+.container{
+    margin:12px ;
+    width: 90%;
+    max-width: 700px;
+}
+.display{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background: rgba(255,255,255,0.15);
+     color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.container h1{
+    font-weight: 500;
+    font-size: 45px;
+}
+
+.container h1 span{
+    color: #019f55;
+    border-bottom: 4px solid #019f55;
+
+}
+
+.display img{
+    width: 30px;
+    cursor: pointer;
+}
+.display input{
+    border: 0;
+    outline: 0;
+    font-size: 25px;
+    background: transparent;
+    color: #f8fafc;
+}
+
+.container button img{
+    width: 28px;
+    margin-right: 10px;
+
+}
+
+.container button{
+    border: 0;
+    outline: 0;
+    background: rgba(1,159,85,0.8);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 26px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.container button{
+    transition: 
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background 0.25s ease;
+}
+
+.container button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(1,159,85,0.45);
+    background: rgba(1,159,85,1);
+}
+
+.container button:active{
+    transform: scale(0.97);
+}
+
+
+.display img{
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.display img:hover{
+    transform: scale(1.15) rotate(-5deg);
+    opacity: 0.85;
+}
+
+.display{
+    transition: box-shadow 0.3s ease;
+}
+
+.display:focus-within{
+    box-shadow: 0 0 0 2px rgba(1,159,85,0.6);
+}
+
+.container{
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.container h1 span{
+    position: relative;
+}
+
+.container h1 span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 4px;
+    background: #019f55;
+    transition: width 0.4s ease;
+}
+
+.container:hover h1 span::after{
+    width: 100%;
+}
+
